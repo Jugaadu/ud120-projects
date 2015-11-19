@@ -32,7 +32,7 @@ plt.show()
 
 ### your code here!  name your classifier object clf if you want the 
 ### visualization code (prettyPicture) to show you the decision boundary
-clf = RandomForestClassifier()
+clf = RandomForestClassifier(n_estimators = 1000, max_depth = 10, min_samples_split = 20)
 #t0 = time()
 clf.fit(features_train,labels_train)
 #print "Training time : ", round(time() - t0,3),"s"
