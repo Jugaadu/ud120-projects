@@ -92,3 +92,14 @@ def poiEmails():
             "chris.loehr@enron.com"
         ]
     return email_list
+
+print " POI available is ", len(poiEmails())
+
+f = open("poi_names.txt","r")
+xList = []
+with open("poi_names.txt") as f:
+   for line in f:
+      xList.append(line)
+   
+
+print len(xList)
