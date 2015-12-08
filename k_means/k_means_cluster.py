@@ -57,8 +57,8 @@ poi, finance_features = targetFeatureSplit( data )
 a2 = [y    for [x,y,z] in finance_features if y != 0]
 a1 = [x for [x,y,z] in finance_features if x != 0]
 
-high = max(a1)
-low = min(a1)
+high = max(a2)
+low = min(a2)
 
 
 print "Maximum value of exercised_stock_option :", high," Min of exercised_stock_option : ", low
@@ -80,6 +80,6 @@ pred = KMeans(n_clusters = 3).fit_predict(data)
 ### rename the "name" parameter when you change the number of features
 ### so that the figure gets saved to a different file
 try:
-    Draw(pred, finance_features, poi, mark_poi=False, name="clusters.pdf", f1_name=feature_1, f2_name=feature_2)
+    Draw(pred, finance_features, poi, mark_poi=False, name="clusters2.pdf", f1_name=feature_1, f2_name=feature_2)
 except NameError:
     print "no predictions object named pred found, no clusters to plot"
